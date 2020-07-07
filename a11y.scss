@@ -1,0 +1,79 @@
+$dashed-outline: 5px dashed #ff5500;
+$solid-outline: 5px solid #ff5500;
+
+%message-style {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 10px;
+  clear: both;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+%error{
+    padding:10px; 
+    outline: $solid-outline;
+
+    &:after{
+        @extend %message-style;
+    }
+}
+
+/* to check for links with 
+        no href 
+        empty value for href
+        # value fo href 
+*/
+a {
+  &:not([href]),
+  &[href=""],
+  &[href="#"] {
+    @extend %error;
+
+    &:after {
+      content: "href should not be empty or pointing to #";
+    }
+  }
+}
+
+/*
+to check for images with 
+    no alt attribute 
+    empty alt attribute
+*/
+
+img{
+    &:not([alt]), &[alt=""]{
+        @extend %error;
+
+        &:after{
+            content:'Alt attribute should not be empty'
+        }
+    }
+
+    // To give height and width to images to prevent page load jank
+
+    &:not([height]):not([width]){
+        filter: blur(2px);
+
+        &:after{
+            content:"add widht and height attribut to prevent page load jank"
+        }
+    }
+}
+
+/*
+ul and ol should only have li as their child elements. 
+*/
+
+ul > *:not(li),
+ol > *:not(li) {
+  @extend %error;
+
+  &:after{
+      content: "only <li> can be the child of <ul> and <ol> elements"
+  }
+}

@@ -1,29 +1,45 @@
-a:not([href]):after, a[href=""]:after, a[href="#"]:after, img:not([alt]):after, img[alt=""]:after, ul > :not(li):after,
+a:not([href]):after, a[href=""]:after, a[href="#"]:after, img:not([alt]):after, img[alt=""]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, ul > :not(li):after,
 ol > :not(li):after {
   padding: 5px 10px;
-  background-color: black;
-  color: white;
   font-size: 12px;
   border-radius: 5px;
   display: inline-block;
   margin-left: 10px;
   clear: both;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
-a:not([href]), a[href=""], a[href="#"], img:not([alt]), img[alt=""], ul > *:not(li),
+a:not([href]), a[href=""], a[href="#"], img:not([alt]), img[alt=""], input:not([id]), label:not([for]), button:not([aria-label]) {
+  padding: 10px;
+  outline: 5px solid #444;
+}
+
+a:not([href]):after, a[href=""]:after, a[href="#"]:after, img:not([alt]):after, img[alt=""]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after {
+  background-color: #F9DEDE;
+  color: red;
+}
+
+ul > *:not(li),
 ol > *:not(li) {
   padding: 10px;
-  outline: 5px solid #ff5500;
+  outline: 5px solid #444;
 }
 
+ul > :not(li):after,
+ol > :not(li):after {
+  background-color: #FFF1D2;
+  color: #f75f07;
+}
+
+/* ACCESSIBILITY */
 /* to check for links with 
         no href 
         empty value for href
         # value fo href 
 */
 a:not([href]):after, a[href=""]:after, a[href="#"]:after {
-  content: "href should not be empty or pointing to #";
+  content: "a11y: href should not be empty or pointing to #";
 }
 
 /*
@@ -32,7 +48,7 @@ to check for images with
     empty alt attribute
 */
 img:not([alt]):after, img[alt=""]:after {
-  content: 'Alt attribute should not be empty';
+  content: 'a11y: Alt attribute should not be empty';
 }
 
 img:not([height]):not([width]) {
@@ -41,14 +57,42 @@ img:not([height]):not([width]) {
 }
 
 img:not([height]):not([width]):after {
-  content: "add widht and height attribut to prevent page load jank";
+  content: "a11y: add widht and height attribut to prevent page load jank";
 }
 
+/* input without id */
+input:not([id]):after {
+  content: "a11y: Give Id to input element";
+}
+
+/* label without for */
+label:not([for]):after {
+  content: 'a11y: Add for attribute to label';
+}
+
+/* buttons without aria-label */
+button:not([aria-label]):after {
+  content: 'a11y: no aria-label found';
+}
+
+input[type='button']:not([aria-label]),
+input[type='reset']:not([aria-label]),
+input[type='submit']:not([aria-label]) {
+  border: 10px solid yellow;
+}
+
+/* SYNTACTICAL ERROR */
 /*
 ul and ol should only have li as their child elements. 
 */
 ul > *:not(li):after,
 ol > *:not(li):after {
-  content: "only <li> can be the child of <ul> and <ol> elements";
+  content: "syntax: only <li> can be the child of <ul> and <ol> elements";
 }
+
+/* h1, div, hr, p inside table */
+/* no divs inside inline elements */
+/* fieldset where legend isn't the first child */
+/* NO IDEA ABOUT IT */
+/* summary must be the first child */
 /*# sourceMappingURL=a11y.css.map */

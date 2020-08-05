@@ -1,15 +1,19 @@
 # a11y.css
 
-## How it work?
-The CSS file detects the <b>accessibility</b> and <b>syntactical</b> errors and highlights it on the website.  
+## How it works?
+The CSS file detects the <b>accessibility</b> and <b>syntactical</b> errors and highlights it on the website.    
 
 ### Steps to follow
 1. Link CSS file to your code
 2. Solve the errors based on the suggestions given
 3. Remove or comment the CSS file   
 
+<br>
+
 ## Will this make my website 100% accessible?
-No, there is no such thing as <i>100% accessible website</i>. a11y.css will try to make the website as error free as possbile.  
+No, there is no such thing as <i>100% accessible website</i>. a11y.css will try to make the website as error free as possbile.
+
+<br>
 
 ## Understanding the error highlights
 ### A11y Rrrors
@@ -25,5 +29,6 @@ This error will be highlighted by a black border around the image
 2. Missing height and width attributes
 This error will be highlighted by a blured layer over the image
 
+<br>
 
 ## What is <b>accessibility</b> and why is it important? 

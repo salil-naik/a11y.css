@@ -1,4 +1,4 @@
-a:not([href]):after, a[href=""]:after, a[href="#"]:after, img:not([alt]):after, img[alt=""]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, ul > :not(li):after,
+a:not([href]):after, a[href=""]:after, a[href="#"]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, ul > :not(li):after,
 ol > :not(li):after {
   padding: 5px 10px;
   font-size: 12px;
@@ -10,12 +10,12 @@ ol > :not(li):after {
   font-weight: 600;
 }
 
-a:not([href]), a[href=""], a[href="#"], img:not([alt]), img[alt=""], input:not([id]), label:not([for]), button:not([aria-label]) {
+a:not([href]), a[href=""], a[href="#"], input:not([id]), label:not([for]), button:not([aria-label]), html:not([lang]), img:not([alt]), img[alt=""], h1:not(:only-of-type) {
   padding: 10px;
   outline: 5px solid #444;
 }
 
-a:not([href]):after, a[href=""]:after, a[href="#"]:after, img:not([alt]):after, img[alt=""]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after {
+a:not([href]):after, a[href=""]:after, a[href="#"]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after {
   background-color: #F9DEDE;
   color: red;
 }
@@ -42,24 +42,6 @@ a:not([href]):after, a[href=""]:after, a[href="#"]:after {
   content: "a11y: href should not be empty or pointing to #";
 }
 
-/*
-to check for images with 
-    no alt attribute 
-    empty alt attribute
-*/
-img:not([alt]):after, img[alt=""]:after {
-  content: 'a11y: Alt attribute should not be empty';
-}
-
-img:not([height]):not([width]) {
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
-
-img:not([height]):not([width]):after {
-  content: "a11y: add widht and height attribut to prevent page load jank";
-}
-
 /* input without id */
 input:not([id]):after {
   content: "a11y: Give Id to input element";
@@ -79,6 +61,42 @@ input[type='button']:not([aria-label]),
 input[type='reset']:not([aria-label]),
 input[type='submit']:not([aria-label]) {
   border: 10px solid yellow;
+}
+
+/* GlOBAL CODE */
+/* use a lang attribute on html element */
+html:not([lang]):after {
+  position: absolute;
+  padding: 30px;
+  top: 20px;
+  right: 20px;
+  content: 'a11y: use a lang attribute on the html element';
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
+          box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
+}
+
+/* each page should have a title element */
+head > *:not(title) {
+  background-color: red;
+  /* incomplete */
+}
+
+/* IMAGES */
+/*
+to check for images with 
+    no alt attribute 
+    empty alt attribute
+*/
+img:not([height]):not([width]) {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+/* HEADINGS */
+h1:not(:only-of-type):after {
+  content: "a11y: Use only one h1 -moz-element per page or view";
+  content: "a11y: Use only one h1 element per page or view";
 }
 
 /* SYNTACTICAL ERROR */

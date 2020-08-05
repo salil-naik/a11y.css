@@ -57,32 +57,6 @@ a {
   }
 }
 
-/*
-to check for images with 
-    no alt attribute 
-    empty alt attribute
-*/
-
-img{
-    &:not([alt]), &[alt=""]{
-        @extend %error--a11y;
-
-        &:after{
-            content:'a11y: Alt attribute should not be empty'
-        }
-    }
-
-    // To give height and width to images to prevent page load jank
-
-    &:not([height]):not([width]){
-        filter: blur(2px);
-
-        &:after{
-            content:"a11y: add widht and height attribut to prevent page load jank"
-        }
-    }
-}
-
 /* input without id */
 input:not([id]){
   @extend %error--a11y;
@@ -115,6 +89,65 @@ input[type='reset'],
 input[type='submit']{ 
   &:not([aria-label]){
     border:10px solid yellow;
+  }
+}
+
+/* GlOBAL CODE */
+
+/* use a lang attribute on html element */
+html:not([lang]){
+  @extend %error--a11y;
+
+  &:after{
+    position: absolute;; 
+    padding:30px; top:20px; right:20px;
+    content: 'a11y: use a lang attribute on the html element';
+    border-radius:10px; 
+    box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
+  }
+}
+
+/* each page should have a title element */
+
+head > *:not(title){
+  background-color:red;
+  /* incomplete */
+}
+
+/* IMAGES */
+
+/*
+to check for images with 
+    no alt attribute 
+    empty alt attribute
+*/
+
+img{
+  &:not([alt]), &[alt=""]{
+      @extend %error--a11y;
+
+      // &:after{
+      //     content:'a11y: Alt attribute should not be empty'
+      // }
+  }
+
+  // To give height and width to images to prevent page load jank
+
+  &:not([height]):not([width]){
+      filter: blur(2px);
+
+      // &:after{
+      //     content:"a11y: add widht and height attribut to prevent page load jank"
+      // }
+  }
+}
+
+/* HEADINGS */
+h1:not(:only-of-type){
+  @extend %error--a11y;
+
+  &:after{
+    content: "a11y: Use only one h1 element per page or view"
   }
 }
 

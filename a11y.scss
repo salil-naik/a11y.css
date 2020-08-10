@@ -40,23 +40,6 @@ $solid-outline-error: 5px solid #ff5500;
 
 /* ACCESSIBILITY */ 
 
-/* to check for links with 
-        no href 
-        empty value for href
-        # value fo href 
-*/
-a {
-  &:not([href]),
-  &[href=""],
-  &[href="#"] {
-    @extend %error--a11y;
-
-    &:after {
-      content: "a11y: href should not be empty or pointing to #";
-    }
-  }
-}
-
 /* input without id */
 input:not([id]){
   @extend %error--a11y;
@@ -143,6 +126,8 @@ img{
 }
 
 /* HEADINGS */
+
+/* to check number of h1 elements */
 h1:not(:only-of-type){
   @extend %error--a11y;
 
@@ -150,6 +135,45 @@ h1:not(:only-of-type){
     content: "a11y: Use only one h1 element per page or view"
   }
 }
+
+/* to check the sequence of heading tags */
+h6 ~ h1,
+h6 ~ h2,
+h6 ~ h3,
+h6 ~ h4,
+h6 ~ h5, 
+h5 ~ h1,
+h5 ~ h2,
+h5 ~ h3,
+h5 ~ h4,
+h4 ~ h1,
+h4 ~ h2,
+h4 ~ h3,
+h3 ~ h1,
+h3 ~ h2,
+h2 ~ h1{
+  @extend %error--a11y; 
+
+  &:after{
+    content: "ally: Heading elements should be written in a logical sequence, for example, <h2> cannot come before <h1>"
+  }
+}
+
+/* CONTROL */ 
+
+/* to check for links with 1. no href , 2. empty value for href, 3. # value fo href */
+a {
+  &:not([href]),
+  &[href=""],
+  &[href="#"] {
+    @extend %error--a11y;
+
+    &:after {
+      content: "a11y: href should not be empty or pointing to #";
+    }
+  }
+}
+
 
 /* SYNTACTICAL ERROR */
 

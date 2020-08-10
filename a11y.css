@@ -1,4 +1,18 @@
-a:not([href]):after, a[href=""]:after, a[href="#"]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, ul > :not(li):after,
+input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
+h6 ~ h2:after,
+h6 ~ h3:after,
+h6 ~ h4:after,
+h6 ~ h5:after,
+h5 ~ h1:after,
+h5 ~ h2:after,
+h5 ~ h3:after,
+h5 ~ h4:after,
+h4 ~ h1:after,
+h4 ~ h2:after,
+h4 ~ h3:after,
+h3 ~ h1:after,
+h3 ~ h2:after,
+h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after, ul > :not(li):after,
 ol > :not(li):after {
   padding: 5px 10px;
   font-size: 12px;
@@ -10,12 +24,40 @@ ol > :not(li):after {
   font-weight: 600;
 }
 
-a:not([href]), a[href=""], a[href="#"], input:not([id]), label:not([for]), button:not([aria-label]), html:not([lang]), img:not([alt]), img[alt=""], h1:not(:only-of-type) {
+input:not([id]), label:not([for]), button:not([aria-label]), html:not([lang]), img:not([alt]), img[alt=""], h1:not(:only-of-type), h6 ~ h1,
+h6 ~ h2,
+h6 ~ h3,
+h6 ~ h4,
+h6 ~ h5,
+h5 ~ h1,
+h5 ~ h2,
+h5 ~ h3,
+h5 ~ h4,
+h4 ~ h1,
+h4 ~ h2,
+h4 ~ h3,
+h3 ~ h1,
+h3 ~ h2,
+h2 ~ h1, a:not([href]), a[href=""], a[href="#"] {
   padding: 10px;
   outline: 5px solid #444;
 }
 
-a:not([href]):after, a[href=""]:after, a[href="#"]:after, input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after {
+input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
+h6 ~ h2:after,
+h6 ~ h3:after,
+h6 ~ h4:after,
+h6 ~ h5:after,
+h5 ~ h1:after,
+h5 ~ h2:after,
+h5 ~ h3:after,
+h5 ~ h4:after,
+h4 ~ h1:after,
+h4 ~ h2:after,
+h4 ~ h3:after,
+h3 ~ h1:after,
+h3 ~ h2:after,
+h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after {
   background-color: #F9DEDE;
   color: red;
 }
@@ -33,15 +75,6 @@ ol > :not(li):after {
 }
 
 /* ACCESSIBILITY */
-/* to check for links with 
-        no href 
-        empty value for href
-        # value fo href 
-*/
-a:not([href]):after, a[href=""]:after, a[href="#"]:after {
-  content: "a11y: href should not be empty or pointing to #";
-}
-
 /* input without id */
 input:not([id]):after {
   content: "a11y: Give Id to input element";
@@ -94,9 +127,35 @@ img:not([height]):not([width]) {
 }
 
 /* HEADINGS */
+/* to check number of h1 elements */
 h1:not(:only-of-type):after {
   content: "a11y: Use only one h1 -moz-element per page or view";
   content: "a11y: Use only one h1 element per page or view";
+}
+
+/* to check the sequence of heading tags */
+h6 ~ h1:after,
+h6 ~ h2:after,
+h6 ~ h3:after,
+h6 ~ h4:after,
+h6 ~ h5:after,
+h5 ~ h1:after,
+h5 ~ h2:after,
+h5 ~ h3:after,
+h5 ~ h4:after,
+h4 ~ h1:after,
+h4 ~ h2:after,
+h4 ~ h3:after,
+h3 ~ h1:after,
+h3 ~ h2:after,
+h2 ~ h1:after {
+  content: "ally: Heading elements should be written in a logical sequence, for example, <h2> cannot come before <h1>";
+}
+
+/* CONTROL */
+/* to check for links with 1. no href , 2. empty value for href, 3. # value fo href */
+a:not([href]):after, a[href=""]:after, a[href="#"]:after {
+  content: "a11y: href should not be empty or pointing to #";
 }
 
 /* SYNTACTICAL ERROR */

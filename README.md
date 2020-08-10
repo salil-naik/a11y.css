@@ -10,11 +10,6 @@ The CSS file detects the <b>accessibility</b> and <b>syntactical</b> errors and 
 
 <br>
 
-## Will this make my website 100% accessible?
-No, there is no such thing as <i>100% accessible website</i>. a11y.css will try to make the website as error free as possbile.
-
-<br>
-
 ## Understanding the error highlights
 ### A11y Rrrors
 A11Y errors will be highlighted with red colored text. The border of the highlighted elements will be turned black in color. 
@@ -32,3 +27,8 @@ This error will be highlighted by a blured layer over the image
 <br>
 
 ## What is <b>accessibility</b> and why is it important? 
+
+<br>
+
+## Will this make my website 100% accessible?
+No, there is no such thing as <i>100% accessible website</i>. a11y.css will try to make the website as error free as possbile. In addition to using a11y.css, we recommend you to go through A11Y Checklists by <a href="https://www.a11yproject.com/checklist/"><b>a11yproject.com</b></a>

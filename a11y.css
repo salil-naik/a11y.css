@@ -149,7 +149,7 @@ h4 ~ h3:after,
 h3 ~ h1:after,
 h3 ~ h2:after,
 h2 ~ h1:after {
-  content: "ally: Heading elements should be written in a logical sequence, for example, <h2> cannot come before <h1>";
+  content: "a11y: Heading elements should be written in a logical sequence, for example, <h2> cannot come before <h1>";
 }
 
 /* CONTROL */

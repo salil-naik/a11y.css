@@ -27,6 +27,7 @@ This error will be highlighted by a blured layer over the image
 <br>
 
 ## What is <b>accessibility</b> and why is it important? 
+In brief 1 para, and link to my article. 
 
 <br>
 

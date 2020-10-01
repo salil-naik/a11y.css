@@ -78,8 +78,8 @@ ol > :not(li):after {
 
 /* ACCESSIBILITY */
 /* input without id */
-input:not([id]):after {
-  content: "a11y: Give Id to input element";
+input:not([id]) {
+  outline-color: red;
 }
 
 /* label without for */

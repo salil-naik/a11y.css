@@ -46,9 +46,8 @@ $solid-outline-error: 5px solid #ff5500;
 input:not([id]){
   @extend %error--a11y;
 
-  &:after{
-    content: "a11y: Give Id to input element"
-  }
+  outline-color:red;
+  // content: "a11y: Give Id to input element"
 }
 
 /* label without for */

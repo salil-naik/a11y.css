@@ -42,7 +42,9 @@ Two image errors will be highlighted.
 
 ## Demos
 
-1. [Demo 1](/demos/smash-template/index.html)
+1. [Demo 1](https://salil-naik.github.io/a11y-demo/demo-1/index.html)
+1. [Demo 2](https://salil-naik.github.io/a11y-demo/demo-2/index.html)
+1. [Demo 3](https://salil-naik.github.io/a11y-demo/demo-3/index.html)
 
 <br />
 

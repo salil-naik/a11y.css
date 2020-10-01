@@ -1,17 +1,20 @@
-# a11y.css
+# a11y.css &middot; ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) 
 
 ## How it works?
 The CSS file detects the <b>accessibility</b> and <b>syntactical</b> errors and highlights it on the website.    
 
 ### Steps to follow
 1. Link CSS file to your code
+    ```html
+    <link href="https://cdn.jsdelivr.net/gh/salil-naik/a11y.css/a11y.css" rel="stylesheet" type="text/css">
+    ```
 2. Solve the errors based on the suggestions given
 3. Remove or comment the CSS file   
 
 <br>
 
 ## Understanding the error highlights
-### A11y Rrrors
+### A11y Errors
 A11Y errors will be highlighted with red colored text. The border of the highlighted elements will be turned black in color. 
 
 ### Syntactical Errors
@@ -27,7 +30,7 @@ This error will be highlighted by a blured layer over the image
 <br>
 
 ## What is <b>accessibility</b> and why is it important? 
-In brief 1 para, and link to my article. 
+Read [blog post]() on Dev.to
 
 <br>
 

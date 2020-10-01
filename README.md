@@ -50,7 +50,7 @@ Two image errors will be highlighted.
 
 ## What is <b>accessibility</b> and why is it important?
 
-Read my [blog post]() on Dev.to
+Read my **[blog post](https://dev.to/salilnaik/what-is-web-a11y-and-why-is-it-important-4fic)** on Dev.to
 
 <br />
 

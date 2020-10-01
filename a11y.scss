@@ -19,6 +19,7 @@ $solid-outline-error: 5px solid #ff5500;
 %error--a11y{
     padding:10px; 
     outline: $solid-outline;
+    margin:20px !important;
 
     &:after{
         @extend %message-style;
@@ -30,6 +31,7 @@ $solid-outline-error: 5px solid #ff5500;
 %error--syntax{
   padding:10px; 
   outline: $solid-outline;
+  margin:20px !important;
 
   &:after{
       @extend %message-style;

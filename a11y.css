@@ -41,6 +41,7 @@ h3 ~ h2,
 h2 ~ h1, a:not([href]), a[href=""], a[href="#"] {
   padding: 10px;
   outline: 5px solid #444;
+  margin: 20px !important;
 }
 
 input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
@@ -66,6 +67,7 @@ ul > *:not(li),
 ol > *:not(li) {
   padding: 10px;
   outline: 5px solid #444;
+  margin: 20px !important;
 }
 
 ul > :not(li):after,

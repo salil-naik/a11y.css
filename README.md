@@ -33,7 +33,7 @@ Syntactical errors will be highlighted with yellow-orange colored text. The bord
 
 Two image errors will be highlighted.
 
-1. Missing or empty alt attribute  
+1. Missing or empty alt attribute
    This error will be highlighted by a black border around the image
 2. Missing height and width attributes
    This error will be highlighted by a blured layer over the image
@@ -68,10 +68,11 @@ No, there is no such thing as <i>100% accessible website</i>. a11y.css will try 
 | [What is **Accessibility** and why is it important?]()                                     | [Salil Naik](https://twitter.com/__salil_naik__) |
 | [Accessibility - Material Design](https://material.io/design/usability/accessibility.html) | Material.io                                      |
 | [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)           | [W3C](https://www.w3.org/)                       |
-| [Web Accessibility Podcasts Roundup](https://www.digitala11y.com/web-accessibility-podcasts-rountup/) | Digital Ally by [Raghavendra Satish Peri](https://www.digitala11y.com/author/digitala11y/) |      
+| [Web Accessibility Podcasts Roundup](https://www.digitala11y.com/web-accessibility-podcasts-rountup/) | Digital Ally by [Raghavendra Satish Peri](https://www.digitala11y.com/author/digitala11y/) |
 | [Accessibility Tips for Web Developers](https://dev.to/addyosmani/accessibility-tips-for-web-developers-4cn0) | Dev.to by [Addy Osmani](https://dev.to/addyosmani) |
 | [A11Y — Making web accessibility easier](https://www.thoughtworks.com/podcasts/a11y)       | Thought Works                                    |
 | [8 tools that make accessible design easier](https://www.invisionapp.com/inside-design/accessibility-tools/) | [InVision](https://www.invisionapp.com/)                                          |
 | [Accessibility tips on Twitter](https://twitter.com/a11ytips1)                             | [Neha Sharma](https://twitter.com/hellonehha)    |
 | [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)              | [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) |
 | [Web Accessibility For Beginners](https://www.digitalocean.com/community/tutorials/web-accessibility-for-beginners) | [DigitalOcean Communinty](https://www.digitalocean.com/community) |
+| [Who Can Use - A Color Contrast Tool](https://whocanuse.com/) | [Corey Ginnivan](https://corey.ginnivan.net/) |

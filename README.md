@@ -71,3 +71,7 @@ No, there is no such thing as <i>100% accessible website</i>. a11y.css will try 
 | [Accessibility Tips for Web Developers](https://dev.to/addyosmani/accessibility-tips-for-web-developers-4cn0) | Dev.to by [Addy Osmani](https://dev.to/addyosmani) |
 | [A11Y — Making web accessibility easier](https://www.thoughtworks.com/podcasts/a11y) | Thought Works                                          |
 | [8 tools that make accessible design easier](https://www.invisionapp.com/inside-design/accessibility-tools/) | [InVision](https://www.invisionapp.com/)                                          |
+| [Color Theory and Contrast Ratios](https://www.24a11y.com/2019/color-theory-and-contrast-ratios/) | Christopher Schmitt |
+| [WebAIM](https://webaim.org/) | Center for Persons with Disabilities @ Utah State University |
+| [Color Safe](http://colorsafe.co/) | [Donielle Berg](http://donielleberg.com/) & [Adrian Rapp](http://adrianrapp.com/) |
+| [Microsoft Accessibility Technology & Tools](https://www.microsoft.com/en-us/accessibility) | Microsoft |

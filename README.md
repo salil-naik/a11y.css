@@ -45,6 +45,7 @@ Two image errors will be highlighted.
 1. [Demo 1](https://salil-naik.github.io/a11y-demo/demo-1/index.html)
 1. [Demo 2](https://salil-naik.github.io/a11y-demo/demo-2/index.html)
 1. [Demo 3](https://salil-naik.github.io/a11y-demo/demo-3/index.html)
+1. [Demo 4](https://livio30.github.io/)
 
 <br />
 
@@ -71,6 +72,9 @@ No, there is no such thing as <i>100% accessible website</i>. a11y.css will try 
 | [Accessibility Tips for Web Developers](https://dev.to/addyosmani/accessibility-tips-for-web-developers-4cn0) | Dev.to by [Addy Osmani](https://dev.to/addyosmani) |
 | [A11Y — Making web accessibility easier](https://www.thoughtworks.com/podcasts/a11y) | Thought Works                                          |
 | [8 tools that make accessible design easier](https://www.invisionapp.com/inside-design/accessibility-tools/) | [InVision](https://www.invisionapp.com/)                                          |
+| [Accessibility tips on Twitter](https://twitter.com/a11ytips1)                             | [Neha Sharma](https://twitter.com/hellonehha)    |
+| [Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)              | [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) |
+| [Web Accessibility For Beginners](https://www.digitalocean.com/community/tutorials/web-accessibility-for-beginners) | [DigitalOcean Communinty](https://www.digitalocean.com/community) |
 | [Color Theory and Contrast Ratios](https://www.24a11y.com/2019/color-theory-and-contrast-ratios/) | Christopher Schmitt |
 | [WebAIM](https://webaim.org/) | Center for Persons with Disabilities @ Utah State University |
 | [Color Safe](http://colorsafe.co/) | [Donielle Berg](http://donielleberg.com/) & [Adrian Rapp](http://adrianrapp.com/) |

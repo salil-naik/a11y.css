@@ -1,4 +1,4 @@
-input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
+input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, meta:not([charset="UTF-8"]):not([charset="utf-8"])[charset]:after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
 h6 ~ h2:after,
 h6 ~ h3:after,
 h6 ~ h4:after,
@@ -13,7 +13,7 @@ h4 ~ h3:after,
 h3 ~ h1:after,
 h3 ~ h2:after,
 h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after, ul > :not(li):after,
-ol > :not(li):after {
+ol > :not(li):after, fieldset:not(legend):first-child:after {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 5px;
@@ -24,7 +24,7 @@ ol > :not(li):after {
   font-weight: 600;
 }
 
-input:not([id]), label:not([for]), button:not([aria-label]), html:not([lang]), img:not([alt]), img[alt=""], h1:not(:only-of-type), h6 ~ h1,
+input:not([id]), label:not([for]), button:not([aria-label]), html:not([lang]), meta[charset]:not([charset="utf-8"]):not([charset="UTF-8"]), img:not([alt]), img[alt=""], h1:not(:only-of-type), h6 ~ h1,
 h6 ~ h2,
 h6 ~ h3,
 h6 ~ h4,
@@ -44,7 +44,7 @@ h2 ~ h1, a:not([href]), a[href=""], a[href="#"] {
   margin: 20px !important;
 }
 
-input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
+input:not([id]):after, label:not([for]):after, button:not([aria-label]):after, html:not([lang]):after, meta:not([charset="UTF-8"]):not([charset="utf-8"])[charset]:after, img:not([alt]):after, img[alt=""]:after, h1:not(:only-of-type):after, h6 ~ h1:after,
 h6 ~ h2:after,
 h6 ~ h3:after,
 h6 ~ h4:after,
@@ -64,14 +64,14 @@ h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after {
 }
 
 ul > *:not(li),
-ol > *:not(li) {
+ol > *:not(li), fieldset:first-child:not(legend) {
   padding: 10px;
   outline: 5px solid #444;
   margin: 20px !important;
 }
 
 ul > :not(li):after,
-ol > :not(li):after {
+ol > :not(li):after, fieldset:not(legend):first-child:after {
   background-color: #FFF1D2;
   color: #f75f07;
 }
@@ -106,6 +106,18 @@ html:not([lang]):after {
   top: 20px;
   right: 20px;
   content: 'a11y: use a lang attribute on the html element';
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
+          box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
+}
+
+/*using the correct charset*/
+meta[charset]:not([charset="utf-8"]):not([charset="UTF-8"]):after {
+  position: absolute;
+  padding: 30px;
+  top: 20px;
+  right: 20px;
+  content: 'a11y: use a charset of utf-8';
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
           box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
@@ -169,9 +181,13 @@ ol > *:not(li):after {
   content: "syntax: only <li> can be the child of <ul> and <ol> elements";
 }
 
+/* fieldset where legend isn't the first child */
+fieldset:first-child:not(legend):after {
+  content: "syntax: only <legend> should be first child of <fieldset> element";
+}
+
 /* h1, div, hr, p inside table */
 /* no divs inside inline elements */
-/* fieldset where legend isn't the first child */
 /* NO IDEA ABOUT IT */
 /* summary must be the first child */
 /*# sourceMappingURL=a11y.css.map */

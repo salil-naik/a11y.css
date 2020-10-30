@@ -13,7 +13,7 @@ h4 ~ h3:after,
 h3 ~ h1:after,
 h3 ~ h2:after,
 h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after, ul > :not(li):after,
-ol > :not(li):after {
+ol > :not(li):after, fieldset:not(legend):first-child:after {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 5px;
@@ -59,20 +59,20 @@ h4 ~ h3:after,
 h3 ~ h1:after,
 h3 ~ h2:after,
 h2 ~ h1:after, a:not([href]):after, a[href=""]:after, a[href="#"]:after {
-  background-color: #F9DEDE;
+  background-color: #f9dede;
   color: red;
 }
 
 ul > *:not(li),
-ol > *:not(li) {
+ol > *:not(li), fieldset:first-child:not(legend) {
   padding: 10px;
   outline: 5px solid #444;
   margin: 20px !important;
 }
 
 ul > :not(li):after,
-ol > :not(li):after {
-  background-color: #FFF1D2;
+ol > :not(li):after, fieldset:not(legend):first-child:after {
+  background-color: #fff1d2;
   color: #f75f07;
 }
 
@@ -84,17 +84,17 @@ input:not([id]) {
 
 /* label without for */
 label:not([for]):after {
-  content: 'a11y: Add for attribute to label';
+  content: "a11y: Add for attribute to label";
 }
 
 /* buttons without aria-label */
 button:not([aria-label]):after {
-  content: 'a11y: no aria-label found';
+  content: "a11y: no aria-label found";
 }
 
-input[type='button']:not([aria-label]),
-input[type='reset']:not([aria-label]),
-input[type='submit']:not([aria-label]) {
+input[type="button"]:not([aria-label]),
+input[type="reset"]:not([aria-label]),
+input[type="submit"]:not([aria-label]) {
   border: 10px solid yellow;
 }
 
@@ -105,7 +105,7 @@ html:not([lang]):after {
   padding: 30px;
   top: 20px;
   right: 20px;
-  content: 'a11y: use a lang attribute on the html element';
+  content: "a11y: use a lang attribute on the html element";
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
           box-shadow: 0px 0px 5px 2px rgba(116, 116, 116, 0.31);
@@ -169,9 +169,13 @@ ol > *:not(li):after {
   content: "syntax: only <li> can be the child of <ul> and <ol> elements";
 }
 
+/* fieldset where legend isn't the first child */
+fieldset:first-child:not(legend):after {
+  content: "syntax: only <legend> should be first child of <fieldset> element";
+}
+
 /* h1, div, hr, p inside table */
 /* no divs inside inline elements */
-/* fieldset where legend isn't the first child */
 /* NO IDEA ABOUT IT */
 /* summary must be the first child */
 /*# sourceMappingURL=a11y.css.map */

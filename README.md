@@ -80,3 +80,5 @@ No, there is no such thing as <i>100% accessible website</i>. a11y.css will try 
 | [Color Safe](http://colorsafe.co/)                                                                                           | [Donielle Berg](http://donielleberg.com/) & [Adrian Rapp](http://adrianrapp.com/)          |
 | [Microsoft Accessibility Technology & Tools](https://www.microsoft.com/en-us/accessibility)                                  | Microsoft                                                                                  |
 | [Who Can Use - **A Color Contrast Tool**](https://whocanuse.com/)                                                            | [Corey Ginnivan](https://corey.ginnivan.net/)                                              |
+[Inclusive Components](https://inclusive-components.design/)                                                            | [ Heydon Pickering](https://heydonworks.com/)                                              |
+
